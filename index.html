@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Сайты для стажировок в IT</title>
+<meta name="description" content="Подборка сайтов для поиска IT-стажировок: специализированные платформы, карьерные страницы крупных компаний и общие площадки.">
+<style>
+  :root {
+    --bg: #0d1117;
+    --surface: #161b22;
+    --surface-hover: #1c2330;
+    --border: #262f3d;
+    --border-hover: #3d6fd6;
+    --text: #e6edf3;
+    --muted: #9aa7b4;
+    --accent: #5b8cff;
+    --accent-soft: rgba(91, 140, 255, 0.12);
+    --radius: 16px;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #f7f8fa;
+      --surface: #ffffff;
+      --surface-hover: #ffffff;
+      --border: #e3e7ee;
+      --border-hover: #3d6fd6;
+      --text: #141a23;
+      --muted: #5c6878;
+      --accent: #2f62e0;
+      --accent-soft: rgba(47, 98, 224, 0.08);
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+
+  header { padding: 72px 0 40px; }
+  .eyebrow {
+    display: inline-block;
+    font-size: 13px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase;
+    color: var(--accent); background: var(--accent-soft);
+    padding: 6px 12px; border-radius: 999px; margin-bottom: 20px;
+  }
+  h1 {
+    font-size: clamp(32px, 6vw, 56px);
+    line-height: 1.1; font-weight: 800; letter-spacing: -0.02em;
+    margin-bottom: 16px;
+  }
+  .lead { font-size: clamp(16px, 2.2vw, 19px); color: var(--muted); max-width: 640px; }
+
+  nav.toc { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+  nav.toc a {
+    font-size: 14px; color: var(--text); text-decoration: none;
+    border: 1px solid var(--border); border-radius: 999px; padding: 8px 16px;
+    transition: border-color .2s ease, background .2s ease;
+  }
+  nav.toc a:hover { border-color: var(--accent); background: var(--accent-soft); }
+
+  section { padding: 40px 0; }
+  .section-head { display: flex; align-items: baseline; gap: 14px; margin-bottom: 8px; }
+  .num { font-size: 14px; font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; }
+  h2 { font-size: clamp(22px, 3.2vw, 30px); font-weight: 700; letter-spacing: -0.01em; }
+  .section-desc { color: var(--muted); margin-bottom: 24px; max-width: 680px; }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 18px;
+  }
+  .card {
+    position: relative;
+    display: flex; flex-direction: column;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    color: inherit; text-decoration: none;
+    transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease, background .25s ease;
+  }
+  .card:hover, .card:focus-visible {
+    transform: translateY(-4px);
+    border-color: var(--border-hover);
+    background: var(--surface-hover);
+    box-shadow: 0 14px 34px rgba(0, 0, 0, .18);
+    outline: none;
+  }
+  .card h3 { font-size: 19px; font-weight: 700; margin-bottom: 8px; }
+  .card p { color: var(--muted); font-size: 15px; flex: 1; margin-bottom: 18px; }
+  .tag {
+    align-self: flex-start;
+    font-size: 12px; font-weight: 600; color: var(--accent);
+    background: var(--accent-soft); border-radius: 6px; padding: 3px 8px; margin-bottom: 14px;
+  }
+  .link {
+    display: flex; align-items: center; justify-content: space-between; gap: 8px;
+    font-size: 14px; font-weight: 600; color: var(--accent);
+    border-top: 1px solid var(--border); padding-top: 14px;
+    word-break: break-all;
+  }
+  .arrow { flex-shrink: 0; transition: transform .25s ease; }
+  .card:hover .arrow { transform: translate(3px, -3px); }
+
+  footer { padding: 48px 0 64px; color: var(--muted); font-size: 14px; border-top: 1px solid var(--border); margin-top: 32px; }
+
+  @media (max-width: 600px) {
+    header { padding: 48px 0 24px; }
+    section { padding: 28px 0; }
+    .card { padding: 20px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { transition: none !important; scroll-behavior: auto !important; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <span class="eyebrow">Подборка для студентов и начинающих</span>
+    <h1>Сайты для стажировок в IT</h1>
+    <p class="lead">Где искать стажировки в разработке, аналитике, дизайне и продукте: специализированные платформы, карьерные страницы крупных компаний и общие площадки с вакансиями.</p>
+    <nav class="toc" aria-label="Разделы">
+      <a href="#platforms">Специализированные платформы</a>
+      <a href="#companies">Карьерные страницы компаний</a>
+      <a href="#general">Общие площадки и обзоры</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="platforms">
+      <div class="section-head"><span class="num">01</span><h2>Специализированные платформы</h2></div>
+      <p class="section-desc">Агрегаторы стажировок и карьерных программ. Используйте фильтр по направлению IT, чтобы видеть только технические позиции.</p>
+      <div class="grid">
+        <a class="card" href="https://it.fut.ru/internship" target="_blank" rel="noopener noreferrer">
+          <span class="tag">Фильтр: IT</span>
+          <h3>FutureToday</h3>
+          <p>Каталог стажировок и программ для студентов и выпускников от ведущих работодателей. Есть отдельный раздел IT-стажировок.</p>
+          <span class="link">it.fut.ru/internship <span class="arrow">↗</span></span>
+        </a>
+        <a class="card" href="https://changellenge.com" target="_blank" rel="noopener noreferrer">
+          <span class="tag">Фильтр: IT</span>
+          <h3>Changellenge</h3>
+          <p>Карьерное сообщество для студентов: стажировки, кейс-чемпионаты и программы крупных компаний. Отфильтруйте вакансии по IT.</p>
+          <span class="link">changellenge.com <span class="arrow">↗</span></span>
+        </a>
+      </div>
+    </section>
+
+    <section id="companies">
+      <div class="section-head"><span class="num">02</span><h2>Карьерные страницы крупных компаний</h2></div>
+      <p class="section-desc">Собственные стажерские программы технологических компаний. Наборы обычно идут волнами, поэтому сроки стоит проверять заранее.</p>
+      <div class="grid">
+        <a class="card" href="https://yandex.ru/yaintern" target="_blank" rel="noopener noreferrer">
+          <h3>Яндекс</h3>
+          <p>Стажировки в разработке, анализе данных, тестировании, дизайне и менеджменте с возможностью перехода в штат.</p>
+          <span class="link">yandex.ru/yaintern <span class="arrow">↗</span></span>
+        </a>
+        <a class="card" href="https://student.sber.ru/internship" target="_blank" rel="noopener noreferrer">
+          <h3>Сбер</h3>
+          <p>Программы для студентов и выпускников: IT, данные, кибербезопасность и другие направления экосистемы Сбера.</p>
+          <span class="link">student.sber.ru/internship <span class="arrow">↗</span></span>
+        </a>
+        <a class="card" href="https://internship.vk.company" target="_blank" rel="noopener noreferrer">
+          <h3>VK</h3>
+          <p>Оплачиваемые стажировки в командах соцсетей, сервисов и инфраструктуры VK.</p>
+          <span class="link">internship.vk.company <span class="arrow">↗</span></span>
+        </a>
+        <a class="card" href="https://www.tbank.ru/career/start" target="_blank" rel="noopener noreferrer">
+          <h3>Т-Банк</h3>
+          <p>Стартовые программы, стажировки и школы для начинающих специалистов в разработке, аналитике и продукте.</p>
+          <span class="link">tbank.ru/career/start <span class="arrow">↗</span></span>
+        </a>
+        <a class="card" href="https://changellenge.com/company/avito" target="_blank" rel="noopener noreferrer">
+          <h3>Авито</h3>
+          <p>Стажировки и карьерные возможности Авито для студентов и выпускников на площадке Changellenge.</p>
+          <span class="link">changellenge.com/company/avito <span class="arrow">↗</span></span>
+        </a>
+        <a class="card" href="https://career.ozon.ru/internships" target="_blank" rel="noopener noreferrer">
+          <h3>Ozon</h3>
+          <p>Стажировки в Ozon Tech и других подразделениях: разработка, аналитика, продукт.</p>
+          <span class="link">career.ozon.ru/internships <span class="arrow">↗</span></span>
+        </a>
+      </div>
+    </section>
+
+    <section id="general">
+      <div class="section-head"><span class="num">03</span><h2>Общие площадки и обзоры</h2></div>
+      <p class="section-desc">Крупные сайты вакансий и материалы, которые помогают сориентироваться в рынке стажировок.</p>
+      <div class="grid">
+        <a class="card" href="https://hh.ru" target="_blank" rel="noopener noreferrer">
+          <h3>hh.ru</h3>
+          <p>Крупнейший сайт вакансий в России. Ищите по запросу «стажёр» и фильтру «без опыта» в сфере IT.</p>
+          <span class="link">hh.ru <span class="arrow">↗</span></span>
+        </a>
+        <a class="card" href="https://career.habr.com" target="_blank" rel="noopener noreferrer">
+          <h3>Хабр Карьера</h3>
+          <p>Вакансии для IT-специалистов, включая позиции уровня Intern и Junior, плюс зарплатная аналитика.</p>
+          <span class="link">career.habr.com <span class="arrow">↗</span></span>
+        </a>
+        <a class="card" href="https://soprovodai.ru/internships" target="_blank" rel="noopener noreferrer">
+          <span class="tag">Обзор</span>
+          <h3>Сопровод AI</h3>
+          <p>Обзорная статья о том, где искать стажировки и как к ним готовиться.</p>
+          <span class="link">soprovodai.ru/internships <span class="arrow">↗</span></span>
+        </a>
+        <a class="card" href="https://practicum.yandex.ru/blog/" target="_blank" rel="noopener noreferrer">
+          <span class="tag">Блог</span>
+          <h3>Блог Практикума Яндекса</h3>
+          <p>Статьи о стажировках, первом месте работы в IT и подготовке к собеседованиям.</p>
+          <span class="link">practicum.yandex.ru/blog <span class="arrow">↗</span></span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Сроки наборов и условия меняются — проверяйте актуальную информацию на сайтах компаний.
+  </footer>
+</div>
+</body>
+</html>
